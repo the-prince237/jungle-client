@@ -1,0 +1,19 @@
+la structure de page ressemble à ça :
+|- accueil : introduit le concept en parallax rapide et affiche immédiatement la liste des propriétés
+    |- Recherches & résultats de recherches : filtrage par mot clé, localisation, prix, conditions d'acquisition, etc...
+    |- Propriété : toutes les informations basiques + boutons pour voir les détails avancés
+        |- Détails Avancés : Liste des vidéos attestant de la véracité de certaines informations clés pouvant être vues séparemment ou en 1e
+            |- Page de Vidéo : visionnage en vue unique de la vidéo de détails
+                |- Paiement rapide : portail de paiement rapide en cas de choix d'une vidéo de cas ou de toutes les infos à visualiser
+    |- Paramètres : Liste de toutes les paramètres disponibles
+        |- Profile : modification des infos de profile
+        |- Paiement : Infos de paiement par défaut
+    |- Profile : Page de profile avec vos articles postés + articles suivis
+        |- Listing : Liste des propriétés postées
+            |- Propriété : Propriété postée avec options de mises à jour
+        |- Archives : Propriétés vendues (archivées)
+            |- Propriété : Avec option de remise en vente.
+|- Support : Contacts whatsapp et Numéro de téléphone qui vont rediriger vers moi
+|- Auth :
+    |- Login
+    |- Signup
