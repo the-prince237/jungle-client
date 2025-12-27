@@ -32,7 +32,7 @@ export function SearchFilters() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white border rounded-lg p-6 sticky top-4">
+    <form onSubmit={handleSubmit} className="bg-white border text-gray-700 rounded-lg p-6 sticky top-4">
       <h3 className="font-bold text-lg mb-4">Filtres</h3>
 
       <div className="space-y-4">
