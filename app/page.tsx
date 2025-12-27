@@ -1,10 +1,18 @@
-import { HomeHero } from "@/presentation";
+import { formatPrice } from '@/lib/utils/sanity-image'
+import { getPropertiesAction } from '@/presentation/actions/property.actions'
 
-export default function Home() {
+export default async function HomePage() {
+  const properties = await getPropertiesAction({ status: 'active' })
+
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans">
-      <HomeHero />
-      {/* <div className="w-screen h-[700vh]" /> */}
+    <div>
+      <h1>Properties</h1>
+      {properties.map(property => (
+        <div key={property.id}>
+          <h2>{property.title}</h2>
+          <p>{formatPrice(property.price, property.currency)}</p>
+        </div>
+      ))}
     </div>
-  );
+  )
 }
