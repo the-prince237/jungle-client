@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
+import { QueryProvider } from "@/presentation/components/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,12 +37,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="fr">
+        <body>
+          <QueryProvider>
+            <nav className="border-b">
+              <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a href="/" className="text-2xl font-bold">Jungle Estate</a>
+                <div className="flex gap-4">
+                  <a href="/search">Rechercher</a>
+                  <a href="/new">Nouvelle annonce</a>
+                  <a href="/profile/me">Mon profil</a>
+                </div>
+              </div>
+            </nav>
+            <main className="min-h-screen">{children}</main>
+            <footer className="border-t py-8 mt-12">
+              <div className="container mx-auto px-4 text-center text-gray-600">
+                © 2024 Jungle Estate - Tous droits réservés
+              </div>
+            </footer>
+          </QueryProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

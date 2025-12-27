@@ -30,7 +30,7 @@ export class SanityAdvancedContentRepository implements IAdvancedContentReposito
     const result = await sanityClient.create({
       _type: 'advancedContent',
       propertyId: { _type: 'reference', _ref: content.propertyId },
-      tag: { _type: 'slug', current: content.tag },
+      tag: { _type: 'tag', current: content.tag },
       title: content.title,
       description: content.description,
       videoUrl: content.videoUrl,

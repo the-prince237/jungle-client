@@ -1,4 +1,4 @@
-import { formatPrice } from '@/lib/utils/sanity-image'
+import { formatPrice } from '@/lib/utils/currency'
 import { getPropertiesAction } from '@/presentation/actions/property.actions'
 
 export default async function HomePage() {
