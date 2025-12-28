@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { QueryProvider } from "@/presentation/components/providers";
 import Link from "next/link";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { degular } from "./fonts"
 
 export const metadata: Metadata = {
   title: "Jungle Immo",
@@ -38,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <ClerkProvider>
-      <html lang="fr">
+    <ClerkProvider>
+      <html lang="fr" className={`${degular.variable} font-sans`}>
         <body>
           <QueryProvider>
             <nav className="border-b bg-white sticky top-0 z-50">
