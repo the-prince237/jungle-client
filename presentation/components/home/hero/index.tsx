@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { AnimatedText, Image, TextScramble, ZoomParallax } from '../../ui';
+import { TypeAnimation } from 'react-type-animation';
 
 export function HomeHero() {
   const images: Image[] = [
@@ -13,7 +14,7 @@ export function HomeHero() {
     { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Rue_Bafoussam_%28Marie_rurale%29.jpg/2560px-Rue_Bafoussam_%28Marie_rurale%29.jpg', alt: 'Hero Image 7' },
     { src: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Kribi_2k18.jpg', alt: 'Hero Image 7' },
     { src: 'https://www.airial.travel/_next/image?url=https%3A%2F%2Fcoinventmediastorage.blob.core.windows.net%2Fmedia-storage-container%2Fgphoto_ChIJAQAAI_sSYRAR5ZJ9U4CIgDs_1.jpg&w=3840&q=70', alt: 'Hero Image 7' },
-];
+  ];
 
 	return <div>
     <div className="relative flex h-[50vh] items-center justify-center">
@@ -21,17 +22,30 @@ export function HomeHero() {
 				<div
 					aria-hidden="true"
 					className={cn(
-						'pointer-events-none absolute -top-1/2 left-1/2 h-[120vmin] w-[120vmin] -translate-x-1/2 rounded-full',
+						'pointer-events-none absolute -top-1/2 left-1/2 h-[120vmin] w-[120vmin] -translate-x-1/2 rounded-full flex flex-col items-center justify-center',
 						'bg-[radial-gradient(ellipse_at_center,--theme(--color-foreground/.1),transparent_50%)]',
 						'blur-[30px]',
 					)}
 				/>
           <div className='flex items-center flex-col'>
-            <TextScramble className='border-solid border rounded-full bg-gray-100 px-2 font-medium text-shadow-border border-gray-400' characterSet="nlJugempaoncrstilde0123456789">
+            <TextScramble className='border-solid border rounded-full bg-gray-100 px-2 font-medium text-shadow-border border-gray-400 text-gray-600' characterSet="nlJugempaoncrstilde0123456789">
               Bienvenu Dans ...
             </TextScramble>
-
             <AnimatedText textClassName='text-8xl' text='Jungle' />
+            <TypeAnimation 
+              sequence={[
+                'Trouve.',
+                1000,
+                'Valide.',
+                1000,
+                'Entre.',
+                1000
+              ]}
+              wrapper="div"
+              speed={50}
+              style={{ fontSize: '2em', marginTop: '16px', fontWeight: '900', color: '#bbb' }}
+              repeat={Infinity} 
+            />
           </div>
         </div>
     <ZoomParallax images={images} />
