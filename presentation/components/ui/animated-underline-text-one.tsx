@@ -1,7 +1,6 @@
 import * as React from "react";
 import { motion, Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { TextScramble } from "./text-scramble";
 
 interface AnimatedTextProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string;

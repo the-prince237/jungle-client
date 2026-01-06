@@ -4,6 +4,8 @@ import { ClerkProvider, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { QueryProvider } from "@/presentation/components/providers";
 import Link from "next/link";
 import { degular } from "./fonts"
+import NextTopLoader from "nextjs-toploader";
+import { MobileNavigator } from "@/presentation";
 
 export const metadata: Metadata = {
   title: "Jungle Immo",
@@ -31,6 +33,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="fr" className={`${degular.variable} font-sans`}>
         <body>
+          <NextTopLoader color='oklch(60% 0.118 184.704)' height={5} showSpinner={false} />
           <QueryProvider>
             <nav className="border-b bg-white sticky top-0 z-50">
               <div className="container mx-auto px-4 py-4">
@@ -41,7 +44,7 @@ export default function RootLayout({
                   </Link>
 
                   {/* Navigation principale */}
-                  <div className="hidden md:flex text-gray-700 gap-6 items-center">
+                  <div className="hidden lg:flex text-gray-700 gap-6 items-center">
                     <Link href="/" className="hover:text-blue-600">
                       Accueil
                     </Link>
@@ -89,28 +92,9 @@ export default function RootLayout({
                         }}
                       />
                     </SignedIn>
-                  </div>
-                </div>
 
-                {/* Navigation mobile */}
-                <div className="md:hidden mt-4 flex gap-4 overflow-x-auto pb-2">
-                  <Link href="/" className="text-sm whitespace-nowrap">
-                    Accueil
-                  </Link>
-                  <Link href="/search" className="text-sm whitespace-nowrap">
-                    Rechercher
-                  </Link>
-                  <SignedIn>
-                    <Link href="/new" className="text-sm whitespace-nowrap">
-                      + Nouvelle annonce
-                    </Link>
-                    <Link href="/profile/me" className="text-sm whitespace-nowrap">
-                      Mon profil
-                    </Link>
-                  </SignedIn>
-                  <Link href="/support" className="text-sm whitespace-nowrap">
-                    Support
-                  </Link>
+                    <MobileNavigator />
+                  </div>
                 </div>
               </div>
             </nav>
