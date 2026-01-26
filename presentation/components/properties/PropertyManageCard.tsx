@@ -44,7 +44,7 @@ export function PropertyManageCard({ property }: PropertyManageCardProps) {
                 📍 {property.location.city}, {property.location.area}
               </p>
             </div>
-            <span className="text-xl font-bold text-blue-600">
+            <span className="text-xl font-bold text-primary">
               {formatPrice(property.price, property.currency)}
             </span>
           </div>
@@ -56,7 +56,7 @@ export function PropertyManageCard({ property }: PropertyManageCardProps) {
           <div className="flex gap-3">
             <Link
               href={`/${property.slug}`}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary"
             >
               👁 Voir
             </Link>

@@ -33,7 +33,7 @@ export default async function PaymentPage({
           
           <div className="flex justify-between items-center py-4 border-t">
             <span className="font-bold">Prix</span>
-            <span className="text-2xl font-bold text-blue-600">
+            <span className="text-2xl font-bold text-primary">
               {formatPrice(content.price, content.currency)}
             </span>
           </div>

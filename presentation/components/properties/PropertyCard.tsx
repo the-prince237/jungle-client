@@ -34,7 +34,7 @@ export function PropertyCard({ property, showArchived }: PropertyCardProps) {
           </p>
           
           <div className="flex justify-between items-center">
-            <span className="text-blue-600 font-bold text-xl">
+            <span className="text-primary font-bold text-xl">
               {formatPrice(property.price, property.currency)}
             </span>
             <span className="text-sm text-gray-600">

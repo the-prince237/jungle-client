@@ -52,7 +52,7 @@ export function ContentCard({ content, propertySlug, userId }: ContentCardProps)
           ) : hasAccess ? (
             <span className="text-green-600 font-bold">✓ Accès débloqué</span>
           ) : (
-            <span className="text-blue-600 font-bold">
+            <span className="text-primary font-bold">
               {formatPrice(content.price, content.currency)}
             </span>
           )}

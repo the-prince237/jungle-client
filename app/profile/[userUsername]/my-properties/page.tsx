@@ -18,7 +18,7 @@ export default async function MyPropertiesPage() {
         <h1 className="text-3xl font-bold">Mes propriétés</h1>
         <a 
           href="/new"
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+          className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary"
         >
           + Nouvelle annonce
         </a>
@@ -35,7 +35,7 @@ export default async function MyPropertiesPage() {
           <p className="text-xl text-gray-600 mb-4">
             Vous n'avez pas encore de propriétés
           </p>
-          <a href="/new" className="text-blue-600 hover:underline">
+          <a href="/new" className="text-primary hover:underline">
             Créer votre première annonce
           </a>
         </div>

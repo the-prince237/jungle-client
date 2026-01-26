@@ -30,7 +30,7 @@ export default async function ContentViewPage({
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <a href={`/${propertyUrlSlug}/advanced`} className="text-blue-600 hover:underline mb-4 inline-block">
+      <a href={`/${propertyUrlSlug}/advanced`} className="text-primary hover:underline mb-4 inline-block">
         ← Retour aux preuves
       </a>
 

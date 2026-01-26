@@ -1,3 +1,5 @@
 export * from './zoom-parallax'
 export * from './animated-underline-text-one'
 export * from './text-scramble'
+export * from './header-1'
+export * from './search-bar'

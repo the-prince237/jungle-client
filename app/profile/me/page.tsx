@@ -13,7 +13,7 @@ export default async function MyProfilePage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a 
           href="/profile/me/my-properties"
-          className="p-6 border rounded-lg hover:border-blue-500"
+          className="p-6 border rounded-lg hover:border-primary"
         >
           <h3 className="text-xl font-bold mb-2">🏠 Mes propriétés</h3>
           <p className="text-gray-600">Gérer mes annonces</p>
@@ -21,7 +21,7 @@ export default async function MyProfilePage() {
 
         <a 
           href="/settings/profile"
-          className="p-6 border rounded-lg hover:border-blue-500"
+          className="p-6 border rounded-lg hover:border-primary"
         >
           <h3 className="text-xl font-bold mb-2">⚙️ Paramètres</h3>
           <p className="text-gray-600">Modifier mon profil</p>
@@ -29,7 +29,7 @@ export default async function MyProfilePage() {
 
         <a 
           href="/settings/payment"
-          className="p-6 border rounded-lg hover:border-blue-500"
+          className="p-6 border rounded-lg hover:border-primary"
         >
           <h3 className="text-xl font-bold mb-2">💳 Paiements</h3>
           <p className="text-gray-600">Historique des transactions</p>

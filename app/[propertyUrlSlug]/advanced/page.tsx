@@ -22,7 +22,7 @@ export default async function AdvancedContentPage({
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <a href={`/${propertyUrlSlug}`} className="text-blue-600 hover:underline mb-4 inline-block">
+        <a href={`/${propertyUrlSlug}`} className="text-primary hover:underline mb-4 inline-block">
           ← Retour à la propriété
         </a>
         <h1 className="text-3xl font-bold mb-2">Preuves vidéo détaillées</h1>

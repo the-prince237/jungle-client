@@ -54,7 +54,7 @@ export function Gallery({ images }: GalleryProps) {
             key={idx}
             onClick={() => setCurrentIndex(idx)}
             className={`h-20 rounded-lg overflow-hidden border-2 ${
-              idx === currentIndex ? 'border-blue-600' : 'border-transparent'
+              idx === currentIndex ? 'border-primary' : 'border-transparent'
             }`}
           >
             <img src={img} alt={`Miniature ${idx + 1}`} className="w-full h-full object-cover" />
