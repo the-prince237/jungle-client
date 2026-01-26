@@ -38,8 +38,8 @@ export function Header1() {
 				<div className="items-center gap-3 lg:gap-5 flex">
 					<a href="/#properties" className='hidden md:block'>
 						<Button className='text-base flex items-center gap-2'>
-							Voir les meublés
-							<HouseHeart />
+							Trouver un meublé
+							<MapPinHouseIcon />
 						</Button>
 					</a>
 					<a href="/#properties" className='md:hidden text-white font-extralight w-10 h-10 flex items-center bg-primary justify-center rounded-full'>

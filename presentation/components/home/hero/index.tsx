@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { AnimatedText, TextScramble } from '../../ui';
 import { TypeAnimation } from 'react-type-animation';
-import { ArrowRight, CheckCircle2, Shield, Smartphone } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MapPinHouseIcon, Shield, Smartphone } from 'lucide-react';
 import { Button } from '../../ui/button';
 import React from 'react';
 import { motion } from 'framer-motion'
@@ -47,8 +47,7 @@ export function HomeHero() {
                   />
                 </div>
                 <p className="mt-6 max-w-lg text-lg text-muted-foreground md:text-xl">
-                  La plateforme pensée pour les <span className='font-bold'>logements meublés</span>  : <br /> visitez à
-                  distance, décidez plus vite, sans mauvaises surprises.
+                  La plateforme pensée pour les <span className='font-bold'>logements meublés</span>  : <br /> <b>visitez</b> <span className='text-primary font-semibold'>à distance</span>, <b>décidez</b> <span className='font-semibold text-primary'>plus vite</span>, sans mauvaises surprises.
                 </p>
                 {/* <p className="mt-4 font-black text-base text-muted-foreground">
                   Moins de déplacements. Plus de clarté. Des revenus immédiats.
@@ -62,9 +61,10 @@ export function HomeHero() {
                   <a href="#properties">
                     <Button
                       size="lg"
-                      className="w-full sm:w-auto px-8 text-base"
+                      className="w-full flex items-center gap-3 sm:w-auto px-8 text-base"
                     >
                       <span>Trouver un meublé</span>
+							        <MapPinHouseIcon />
                     </Button>
                   </a>
                 </div>
