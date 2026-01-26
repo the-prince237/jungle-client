@@ -1,27 +1,23 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ClerkProvider, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import { QueryProvider } from "@/presentation/components/providers";
-import Link from "next/link";
 import { degular } from "./fonts"
 import NextTopLoader from "nextjs-toploader";
-import { Footer, Header, MobileNavigator } from "@/presentation";
+import { Footer, Header } from "@/presentation";
+import { smPp2DarkBg } from "@/public/logos";
 
 export const metadata: Metadata = {
   title: "Jungle Immo",
-  description: "Trouve. Valide. Entre.",
+  description: "L'immobilier, Autrement.",
   icons: {
     icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-16x16.png" },
     ],
     apple: [
-      { url: "/apple-icon-180x180.png", sizes: "180x180" },
+      { url: smPp2DarkBg.src },
     ],
   },
-  manifest: "/manifest.json",
-  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
