@@ -84,7 +84,7 @@ export function SearchFilters() {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+          className="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary"
         >
           Appliquer les filtres
         </button>

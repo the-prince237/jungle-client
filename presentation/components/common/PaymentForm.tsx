@@ -77,7 +77,7 @@ function CheckoutForm({ returnUrl }: { returnUrl: string }) {
       <button
         type="submit"
         disabled={isProcessing || !stripe}
-        className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+        className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary disabled:opacity-50"
       >
         {isProcessing ? 'Traitement...' : 'Payer maintenant'}
       </button>

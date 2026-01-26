@@ -46,7 +46,7 @@ export default async function PropertyDetailPage({
             <div className="space-y-3 mb-6">
               <div className="flex justify-between">
                 <span className="text-gray-600">Propriétaire</span>
-                <a href={`/profile/${property.owner?.username}`} className="text-blue-600 hover:underline">
+                <a href={`/profile/${property.owner?.username}`} className="text-primary hover:underline">
                   {property.owner?.username}
                 </a>
               </div>
@@ -56,7 +56,7 @@ export default async function PropertyDetailPage({
               </div>
             </div>
 
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 mb-3">
+            <button className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary mb-3">
               Contacter le propriétaire
             </button>
 

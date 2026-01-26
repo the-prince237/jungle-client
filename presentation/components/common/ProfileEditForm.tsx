@@ -56,7 +56,7 @@ export function ProfileEditForm({ user }: ProfileEditFormProps) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/700 disabled:opacity-50"
+        className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary disabled:opacity-50"
       >
         {isSubmitting ? 'Sauvegarde...' : 'Sauvegarder les modifications'}
       </button>

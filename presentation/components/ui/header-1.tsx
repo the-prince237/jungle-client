@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/presentation/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useScroll } from '@/presentation/components/ui/use-scroll';
-import { HouseHeart, LogInIcon, Search, Settings } from 'lucide-react';
+import { HouseHeart, HousePlug, LogInIcon, LucideHouseHeart, MapPinHouseIcon, Search, Settings } from 'lucide-react';
 import Logo from '../logo';
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
@@ -36,20 +36,25 @@ export function Header1() {
 
 				{/* Right Side */}
 				<div className="items-center gap-3 lg:gap-5 flex">
-					<SignedIn>
-						<div className='text-background w- flex items-center gap-3'>
-							<a href="/settings">
-								<Settings />
-							</a>
-              <UserButton />
-						</div>
-					</SignedIn>
-					<a href="/#properties">
+					<a href="/#properties" className='hidden md:block'>
 						<Button className='text-base flex items-center gap-2'>
 							Voir les meublés
 							<HouseHeart />
 						</Button>
 					</a>
+					<a href="/#properties" className='md:hidden text-white font-extralight w-10 h-10 flex items-center bg-primary justify-center rounded-full'>
+						<MapPinHouseIcon size={18} />
+					</a>
+
+					<SignedIn>
+						<div className='text-background w- flex items-center gap-3'>
+							<a href="/settings" className='size-10 border-primary rounded-full border-2 grid place-items-center p-1 hover:bg-primary hover:text-white transition-colors text-primary'>
+								<Settings size={18} />
+							</a>
+              <UserButton appearance={{ elements: { userButtonAvatarBox: { width: '40px', height: '40px' } } }} />
+						</div>
+					</SignedIn>
+
 					<div className='hidden md:block'>
 						<SignedOut>
 							<SignInButton>

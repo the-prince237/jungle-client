@@ -15,17 +15,17 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Navigation</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><Link href="/" className="hover:text-blue-600">Accueil</Link></li>
-              <li><Link href="/search" className="hover:text-blue-600">Rechercher</Link></li>
-              <li><Link href="/new" className="hover:text-blue-600">Publier une annonce</Link></li>
+              <li><Link href="/" className="hover:text-primary">Accueil</Link></li>
+              <li><Link href="/search" className="hover:text-primary">Rechercher</Link></li>
+              <li><Link href="/new" className="hover:text-primary">Publier une annonce</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold mb-4">Aide</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><Link href="/support" className="hover:text-blue-600">Support</Link></li>
-              <li><Link href="/support#faq" className="hover:text-blue-600">FAQ</Link></li>
+              <li><Link href="/support" className="hover:text-primary">Support</Link></li>
+              <li><Link href="/support#faq" className="hover:text-primary">FAQ</Link></li>
             </ul>
           </div>
 
