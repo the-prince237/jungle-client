@@ -30,8 +30,8 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>📧 support@realestatepro.cm</li>
-              <li>📞 +237 6XX XX XX XX</li>
+              <li>📧 contact@jungle.immo</li>
+              <li>📞 +237 673 080 527</li>
               <li>📍 Yaoundé, Cameroun</li>
             </ul>
           </div>

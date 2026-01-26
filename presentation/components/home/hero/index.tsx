@@ -47,12 +47,12 @@ export function HomeHero() {
                   />
                 </div>
                 <p className="mt-6 max-w-lg text-lg text-muted-foreground md:text-xl">
-                  La plateforme pensée pour les logements meublés : visitez à
+                  La plateforme pensée pour les <span className='font-bold'>logements meublés</span>  : <br /> visitez à
                   distance, décidez plus vite, sans mauvaises surprises.
                 </p>
-                <p className="mt-4 font-black text-base text-muted-foreground">
+                {/* <p className="mt-4 font-black text-base text-muted-foreground">
                   Moins de déplacements. Plus de clarté. Des revenus immédiats.
-                </p>
+                </p> */}
 
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
                   {/* <InteractiveHoverButton
