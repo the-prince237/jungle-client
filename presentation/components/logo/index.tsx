@@ -1,11 +1,13 @@
 import React from 'react'
-import { logoDarkBg } from '@/public/logos'
+import { logoDarkBg, logoSloganWhiteBg } from '@/public/logos'
 import Image from 'next/image'
 
-const Logo = () => {
+const Logo = ({ variant = 'header' }: { variant?: 'footer' | 'header'}) => {
+  const logoSrc = variant === 'header' ? logoDarkBg : logoSloganWhiteBg;
+  const logoWidth = variant === 'header' ? 125 : 250;
   return (
     <a href="/">
-      <Image src={logoDarkBg} alt="Logo" width={125} height={100} />
+      <Image src={logoSrc} alt="Logo" width={logoWidth} height={100} />
     </a>
   )
 }

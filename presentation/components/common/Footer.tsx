@@ -1,15 +1,13 @@
 import Link from 'next/link'
+import Logo from '../logo'
 
 export const Footer = () => {
   return (
     <footer className="border-t bg-gray-50 py-12 mt-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto">
+        <div className="grid w-full padded-x grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Jungle</h3>
-            <p className="text-sm text-gray-600">
-              La plateforme immobilière de confiance au Cameroun
-            </p>
+            <Logo variant='footer' />
           </div>
 
           <div>
