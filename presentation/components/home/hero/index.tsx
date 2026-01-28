@@ -50,9 +50,6 @@ export function HomeHero() {
                 <p className="mt-6 max-w-lg text-lg text-muted-foreground md:text-xl">
                   La plateforme pensée pour les <span className='font-bold'>logements meublés</span>  : <br /> <b>visitez</b> <span className='text-primary font-semibold'>à distance</span>, <b>décidez</b> <span className='font-semibold text-primary'>plus vite</span>, sans mauvaises surprises.
                 </p>
-                {/* <p className="mt-4 font-black text-base text-muted-foreground">
-                  Moins de déplacements. Plus de clarté. Des revenus immédiats.
-                </p> */}
 
                 <div className="mt-10 flex flex-col sm:items-center justify-center gap-4 sm:flex-row lg:justify-start">
                   <Link href="/feed">
