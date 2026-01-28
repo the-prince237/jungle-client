@@ -3,6 +3,7 @@ import { getPropertyContentAction } from '@/presentation/actions/content.actions
 import { getCurrentUserAction } from '@/presentation/actions/user.actions'
 import { notFound } from 'next/navigation'
 import { ContentCard } from '@/presentation/components/content'
+import Link from 'next/link'
 
 export default async function AdvancedContentPage({
   params,
@@ -22,9 +23,9 @@ export default async function AdvancedContentPage({
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <a href={`/${propertyUrlSlug}`} className="text-primary hover:underline mb-4 inline-block">
+        <Link href={`/${propertyUrlSlug}`} className="text-primary hover:underline mb-4 inline-block">
           ← Retour à la propriété
-        </a>
+        </Link>
         <h1 className="text-3xl font-bold mb-2">Preuves vidéo détaillées</h1>
         <p className="text-gray-600">
           Accédez aux vidéos de vérification pour {property.title}

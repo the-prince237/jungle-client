@@ -1,24 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 import {
   Home,
   User,
-  Search,
   LucideHousePlus,
   Settings,
+  MapPinHouseIcon,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const navItems = [
   { label: "Accueil", icon: Home, href: "/" },
-  { label: "Rechercher", icon: Search, href: "/feed" },
+  { label: "Feed", icon: MapPinHouseIcon, href: "/feed" },
   { label: "Ajouter", icon: LucideHousePlus, href: "/new" },
   { label: "Paramètres", icon: Settings, href: "/settings" },
-  { label: "Profile", icon: User, href: '/profile' },
+  { label: "Profile", icon: User, href: '/profile/me' },
 ];
 
 const MOBILE_LABEL_WIDTH = 72;
@@ -35,6 +36,14 @@ export function BottomNavBar({
   stickyBottom = false,
 }: BottomNavBarProps) {
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
+
+  useEffect(() => {
+    const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
+    const activeNavIndex = navItems.findIndex(item => item.href === pathname);
+    if (activeNavIndex !== -1) {
+      setActiveIndex(activeNavIndex);
+    }
+  }, []);
 
   return (
     <motion.nav
@@ -54,11 +63,11 @@ export function BottomNavBar({
         const isActive = activeIndex === idx;
 
         return (
-          <a key={item.label} href={item.href}>
+          <Link key={item.label} href={item.href}>
             <motion.button
               whileTap={{ scale: 0.97 }}
               className={cn(
-                "flex items-center gap-0 px-3 py-2 rounded-full transition-colors duration-200 relative h-13 min-w-[44px] min-h-10 max-h-[44px]",
+                "flex items-center gap-0 px-3 py-2 rounded-full transition-colors duration-200 relative h-13 min-w-11 min-h-10 max-h-11",
                 isActive
                   ? "bg-primary/10 dark:bg-primary/15 text-primary dark:text-primary gap-2"
                   : "bg-transparent text-muted-foreground dark:text-muted-foreground hover:bg-muted dark:hover:bg-muted",
@@ -100,11 +109,11 @@ export function BottomNavBar({
                 </span>
               </motion.div>
             </motion.button>
-          </a>
+          </Link>
         );
       })}
     </motion.nav>
   );
 }
 
-export default BottomNavBar;
+export default React.memo(BottomNavBar);

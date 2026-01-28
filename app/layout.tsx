@@ -7,6 +7,7 @@ import NextTopLoader from "nextjs-toploader";
 import { Footer, Header } from "@/presentation";
 import { smPp2DarkBg } from "@/public/logos";
 import BottomNavBar from "@/presentation/components/ui/bottom-nav-bar";
+import BottomMenu from "@/presentation/components/common/BottomMenu";
 
 export const metadata: Metadata = {
   title: "Jungle Immo",
@@ -34,9 +35,7 @@ export default function RootLayout({
           <QueryProvider>
             <Header />
             <main className="min-h-screen">{children}</main>
-            <div className="fixed z-50 bottom-5 w-full md:hidden padded-x">
-              <BottomNavBar />
-            </div>
+            <BottomMenu />
             <Footer />
           </QueryProvider>
         </body>

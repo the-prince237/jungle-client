@@ -1,4 +1,5 @@
 import { getCurrentUserAction } from '@/presentation/actions/user.actions'
+import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 export default async function MyProfilePage() {
@@ -11,29 +12,29 @@ export default async function MyProfilePage() {
       <h1 className="text-3xl font-bold mb-8">Mon profil</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a 
+        <Link
           href="/profile/me/my-properties"
           className="p-6 border rounded-lg hover:border-primary"
         >
           <h3 className="text-xl font-bold mb-2">🏠 Mes propriétés</h3>
           <p className="text-gray-600">Gérer mes annonces</p>
-        </a>
+        </Link>
 
-        <a 
+        <Link
           href="/settings/profile"
           className="p-6 border rounded-lg hover:border-primary"
         >
           <h3 className="text-xl font-bold mb-2">⚙️ Paramètres</h3>
           <p className="text-gray-600">Modifier mon profil</p>
-        </a>
+        </Link>
 
-        <a 
+        <Link
           href="/settings/payment"
           className="p-6 border rounded-lg hover:border-primary"
         >
           <h3 className="text-xl font-bold mb-2">💳 Paiements</h3>
           <p className="text-gray-600">Historique des transactions</p>
-        </a>
+        </Link>
       </div>
     </div>
   )

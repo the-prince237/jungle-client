@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle2, LucideHousePlus, MapPinHouseIcon, Shield, Sma
 import { Button } from '../../ui/button';
 import React from 'react';
 import { motion } from 'framer-motion'
+import Link from 'next/link';
 
 export function HomeHero() {
 	return (
@@ -54,7 +55,7 @@ export function HomeHero() {
                 </p> */}
 
                 <div className="mt-10 flex flex-col sm:items-center justify-center gap-4 sm:flex-row lg:justify-start">
-                  <a href="/feed">
+                  <Link href="/feed">
                     <Button
                       size="lg"
                       className="w-full flex items-center gap-3 sm:w-auto px-8 text-base"
@@ -62,13 +63,13 @@ export function HomeHero() {
                       <span>Trouver un meublé</span>
 							        <MapPinHouseIcon />
                     </Button>
-                  </a>
-                  <a href="/new">
+                  </Link>
+                  <Link href="/new">
                     <Button variant="outline" className='text-base w-full sm:w-auto bg-transparent text-primary border-primary hover:bg-primary hover:text-white flex items-center gap-2'>
                       Ajouter un meublé
                       <LucideHousePlus />
                     </Button>
-                  </a>  
+                  </Link>  
                 </div>
               </motion.div>
 

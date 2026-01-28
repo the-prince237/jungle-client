@@ -3,6 +3,7 @@ import { getPropertyContentAction } from '@/presentation/actions/content.actions
 import { notFound } from 'next/navigation'
 import { formatPrice } from '@/lib/utils/currency'
 import { Gallery } from '@/presentation/components/common'
+import Link from 'next/link'
 
 export default async function PropertyDetailPage({
   params,
@@ -46,9 +47,9 @@ export default async function PropertyDetailPage({
             <div className="space-y-3 mb-6">
               <div className="flex justify-between">
                 <span className="text-gray-600">Propriétaire</span>
-                <a href={`/profile/${property.owner?.username}`} className="text-primary hover:underline">
+                <Link href={`/profile/${property.owner?.username}`} className="text-primary hover:underline">
                   {property.owner?.username}
-                </a>
+                </Link>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Type</span>
@@ -61,12 +62,12 @@ export default async function PropertyDetailPage({
             </button>
 
             {advancedContent.length > 0 && (
-              <a 
+              <Link
                 href={`/${propertyUrlSlug}/advanced`}
                 className="block w-full bg-purple-600 text-white py-3 rounded-lg text-center hover:bg-purple-700"
               >
                 🎥 Voir les preuves vidéo ({advancedContent.length})
-              </a>
+              </Link>
             )}
           </div>
         </aside>
