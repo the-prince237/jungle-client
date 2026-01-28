@@ -13,6 +13,7 @@ import {
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Accueil", icon: Home, href: "/" },
@@ -36,14 +37,14 @@ export function BottomNavBar({
   stickyBottom = false,
 }: BottomNavBarProps) {
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
     const activeNavIndex = navItems.findIndex(item => item.href === pathname);
     if (activeNavIndex !== -1) {
       setActiveIndex(activeNavIndex);
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <motion.nav
