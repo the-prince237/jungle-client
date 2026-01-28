@@ -3,9 +3,9 @@ import React from 'react';
 import { Button } from '@/presentation/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useScroll } from '@/presentation/components/ui/use-scroll';
-import { HouseHeart, HousePlug, LogInIcon, LucideHouseHeart, MapPinHouseIcon, Search, Settings } from 'lucide-react';
+import {  LucideHousePlus, MapPinHouseIcon, Search, Settings } from 'lucide-react';
 import Logo from '../logo';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 export function Header1() {
 	const scrolled = useScroll(10);
@@ -13,8 +13,8 @@ export function Header1() {
 
 	return (
 		<header
-			className={cn('sticky top-0 z-50 w-full border-b border-transparent bg-foreground', {
-				'bg-foreground/95 supports-backdrop-filter:bg-foreground/95 border-border backdrop-blur-xl':
+			className={cn('sticky top-0 z-60 w-full border-b border-transparent bg-foreground', {
+				'bg-foreground/95 supports-backdrop-filter:bg-foreground/80 shadow-2xs shadow-foreground backdrop-blur-xl':
 					scrolled,
 			})}
 		>
@@ -36,13 +36,13 @@ export function Header1() {
 
 				{/* Right Side */}
 				<div className="items-center gap-3 lg:gap-5 flex">
-					<a href="/#properties" className='hidden md:block'>
+					<a href="/feed" className='hidden md:block'>
 						<Button className='text-base flex items-center gap-2'>
 							Trouver un meublé
 							<MapPinHouseIcon />
 						</Button>
 					</a>
-					<a href="/#properties" className='md:hidden text-white font-extralight w-10 h-10 flex items-center bg-primary justify-center rounded-full'>
+					<a href="/feed" className='md:hidden text-white font-extralight w-10 h-10 flex items-center bg-primary justify-center rounded-full'>
 						<MapPinHouseIcon size={18} />
 					</a>
 
@@ -55,16 +55,17 @@ export function Header1() {
 						</div>
 					</SignedIn>
 
-					<div className='hidden md:block'>
-						<SignedOut>
-							<SignInButton>
-								<Button variant="outline" className='bg-transparent flex items-center gap-3 text-primary border-primary'>
-									Se Connecter
-									<LogInIcon />
-								</Button>
-							</SignInButton>
-						</SignedOut>
-					</div>
+					<SignedOut>
+						<a href="/new" className='hidden md:block'>
+							<Button variant="outline" className='text-base bg-transparent text-primary border-primary hover:bg-primary hover:text-white flex items-center gap-2'>
+								Ajouter un meublé
+								<LucideHousePlus />
+							</Button>
+						</a>
+						<a href="/new" className='md:hidden text-primary border hover:bg-primary hover:text-white font-extralight w-10 h-10 flex items-center border-primary justify-center rounded-full'>
+							<LucideHousePlus size={18} />
+						</a>
+					</SignedOut>
 				</div>
 			</nav>
 		</header>

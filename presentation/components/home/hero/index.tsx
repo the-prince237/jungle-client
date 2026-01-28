@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { AnimatedText, TextScramble } from '../../ui';
 import { TypeAnimation } from 'react-type-animation';
-import { ArrowRight, CheckCircle2, MapPinHouseIcon, Shield, Smartphone } from 'lucide-react';
+import { ArrowRight, CheckCircle2, LucideHousePlus, MapPinHouseIcon, Shield, Smartphone } from 'lucide-react';
 import { Button } from '../../ui/button';
 import React from 'react';
 import { motion } from 'framer-motion'
@@ -53,12 +53,8 @@ export function HomeHero() {
                   Moins de déplacements. Plus de clarté. Des revenus immédiats.
                 </p> */}
 
-                <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
-                  {/* <InteractiveHoverButton
-                    text="Je suis agent"
-                    className="w-full sm:w-auto px-8 py-3 text-base"
-                  /> */}
-                  <a href="#properties">
+                <div className="mt-10 flex flex-col sm:items-center justify-center gap-4 sm:flex-row lg:justify-start">
+                  <a href="/feed">
                     <Button
                       size="lg"
                       className="w-full flex items-center gap-3 sm:w-auto px-8 text-base"
@@ -67,6 +63,12 @@ export function HomeHero() {
 							        <MapPinHouseIcon />
                     </Button>
                   </a>
+                  <a href="/new">
+                    <Button variant="outline" className='text-base w-full sm:w-auto bg-transparent text-primary border-primary hover:bg-primary hover:text-white flex items-center gap-2'>
+                      Ajouter un meublé
+                      <LucideHousePlus />
+                    </Button>
+                  </a>  
                 </div>
               </motion.div>
 
