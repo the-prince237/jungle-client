@@ -3,10 +3,11 @@
 import { cn } from '@/lib/utils';
 import { AnimatedText, TextScramble } from '../../ui';
 import { TypeAnimation } from 'react-type-animation';
-import { ArrowRight, CheckCircle2, MapPinHouseIcon, Shield, Smartphone } from 'lucide-react';
+import { ArrowRight, CheckCircle2, LucideHousePlus, MapPinHouseIcon, Shield, Smartphone } from 'lucide-react';
 import { Button } from '../../ui/button';
 import React from 'react';
 import { motion } from 'framer-motion'
+import Link from 'next/link';
 
 export function HomeHero() {
 	return (
@@ -49,16 +50,9 @@ export function HomeHero() {
                 <p className="mt-6 max-w-lg text-lg text-muted-foreground md:text-xl">
                   La plateforme pensée pour les <span className='font-bold'>logements meublés</span>  : <br /> <b>visitez</b> <span className='text-primary font-semibold'>à distance</span>, <b>décidez</b> <span className='font-semibold text-primary'>plus vite</span>, sans mauvaises surprises.
                 </p>
-                {/* <p className="mt-4 font-black text-base text-muted-foreground">
-                  Moins de déplacements. Plus de clarté. Des revenus immédiats.
-                </p> */}
 
-                <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
-                  {/* <InteractiveHoverButton
-                    text="Je suis agent"
-                    className="w-full sm:w-auto px-8 py-3 text-base"
-                  /> */}
-                  <a href="#properties">
+                <div className="mt-10 flex flex-col sm:items-center justify-center gap-4 sm:flex-row lg:justify-start">
+                  <Link href="/feed">
                     <Button
                       size="lg"
                       className="w-full flex items-center gap-3 sm:w-auto px-8 text-base"
@@ -66,7 +60,13 @@ export function HomeHero() {
                       <span>Trouver un meublé</span>
 							        <MapPinHouseIcon />
                     </Button>
-                  </a>
+                  </Link>
+                  <Link href="/new">
+                    <Button variant="outline" className='text-base w-full sm:w-auto bg-transparent text-primary border-primary hover:bg-primary hover:text-white flex items-center gap-2'>
+                      Ajouter un meublé
+                      <LucideHousePlus />
+                    </Button>
+                  </Link>  
                 </div>
               </motion.div>
 

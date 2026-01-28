@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, SignedIn } from "@clerk/nextjs";
 import { QueryProvider } from "@/presentation/components/providers";
 import { degular } from "./fonts"
 import NextTopLoader from "nextjs-toploader";
 import { Footer, Header } from "@/presentation";
 import { smPp2DarkBg } from "@/public/logos";
+import BottomNavBar from "@/presentation/components/ui/bottom-nav-bar";
+import BottomMenu from "@/presentation/components/common/BottomMenu";
 
 export const metadata: Metadata = {
   title: "Jungle Immo",
@@ -28,11 +30,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="fr" className={`${degular.variable} font-sans`}>
-        <body>
+        <body className="flex flex-col">
           <NextTopLoader color='oklch(60% 0.118 184.704)' height={5} showSpinner={false} />
           <QueryProvider>
             <Header />
             <main className="min-h-screen">{children}</main>
+            <BottomMenu />
             <Footer />
           </QueryProvider>
         </body>

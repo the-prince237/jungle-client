@@ -3,6 +3,7 @@ import { getPropertyContentAction, checkContentAccessAction } from '@/presentati
 import { getCurrentUserAction } from '@/presentation/actions/user.actions'
 import { notFound, redirect } from 'next/navigation'
 import { VideoPlayer } from '@/presentation/components/common'
+import Link from 'next/link'
 
 export default async function ContentViewPage({
   params,
@@ -30,9 +31,9 @@ export default async function ContentViewPage({
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <a href={`/${propertyUrlSlug}/advanced`} className="text-primary hover:underline mb-4 inline-block">
+      <Link href={`/${propertyUrlSlug}/advanced`} className="text-primary hover:underline mb-4 inline-block">
         ← Retour aux preuves
-      </a>
+      </Link>
 
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">{content.title}</h1>

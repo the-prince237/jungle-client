@@ -1,4 +1,5 @@
 import { getCurrentUserAction } from '@/presentation/actions/user.actions'
+import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 export default async function SettingsPage() {
@@ -12,7 +13,7 @@ export default async function SettingsPage() {
 
       <div className="max-w-2xl">
         <nav className="space-y-2">
-          <a 
+          <Link
             href="/settings/profile"
             className="block p-4 border rounded-lg hover:bg-gray-50"
           >
@@ -20,9 +21,9 @@ export default async function SettingsPage() {
             <p className="text-sm text-gray-600">
               Modifier vos informations personnelles
             </p>
-          </a>
+          </Link>
 
-          <a 
+          <Link
             href="/settings/payment"
             className="block p-4 border rounded-lg hover:bg-gray-50"
           >
@@ -30,7 +31,7 @@ export default async function SettingsPage() {
             <p className="text-sm text-gray-600">
               Gérer vos moyens de paiement
             </p>
-          </a>
+          </Link>
         </nav>
       </div>
     </div>

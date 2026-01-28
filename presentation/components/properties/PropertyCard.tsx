@@ -9,13 +9,13 @@ interface PropertyCardProps {
 
 export function PropertyCard({ property, showArchived }: PropertyCardProps) {
   return (
-    <Link href={`/${property.slug}`} className="block group">
-      <div className="border rounded-lg overflow-hidden hover:shadow-lg transition">
-        <div className="relative h-48">
+    <Link href={`/${property.slug}`} className="block group w-full">
+      <div className="border md:rounded-lg w-full overflow-hidden shadow-lg transition">
+        <div className="relative h-auto">
           <img
             src={property.coverImageUrl}
             alt={property.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition"
+            className="w-full aspect-4/3 object-cover group-hover:scale-105 transition"
           />
           {showArchived && (
             <div className="absolute top-2 right-2 bg-gray-800 text-white px-3 py-1 rounded-full text-sm">
