@@ -57,7 +57,7 @@ export function HomeHero() {
                       size="lg"
                       className="w-full flex items-center gap-3 sm:w-auto px-8 text-base"
                     >
-                      <span>Trouver un meublé</span>
+                      <span>Réserver un meublé</span>
 							        <MapPinHouseIcon />
                     </Button>
                   </Link>
@@ -120,12 +120,14 @@ export function HomeHero() {
                         </p>
                       </div>
                     </div>
-                    <Button
-                      size="sm"
-                      className="bg-primary hover:bg-primary"
-                    >
-                      Voir
-                    </Button>
+                    <Link href="/feed">
+                      <Button
+                        size="sm"
+                        className="bg-primary flex items-center gap-2 hover:bg-primary"
+                      >
+                        Réserver un meublé <MapPinHouseIcon />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

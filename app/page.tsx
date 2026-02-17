@@ -1,11 +1,12 @@
-import { HomeHero } from '@/presentation'
+import { Contacts, HomeHero } from '@/presentation'
 
 export default function HomePage() {
   // const properties = await getPropertiesAction({ status: 'active' })
 
   return (
-    <div className="mx-auto overflow-x-hidden flex flex-col gap-20 lg:gap-50 pb-8">
+    <div className="mx-auto overflow-x-hidden flex flex-col gap-20">
       <HomeHero />
+      <Contacts />
     </div>
   )
 }

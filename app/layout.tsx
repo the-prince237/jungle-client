@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { ClerkProvider, SignedIn } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import { QueryProvider } from "@/presentation/components/providers";
 import { degular } from "./fonts"
 import NextTopLoader from "nextjs-toploader";
 import { Footer, Header } from "@/presentation";
 import { smPp2DarkBg } from "@/public/logos";
-import BottomNavBar from "@/presentation/components/ui/bottom-nav-bar";
 import BottomMenu from "@/presentation/components/common/BottomMenu";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Jungle Immo",

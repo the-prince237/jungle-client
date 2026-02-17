@@ -39,7 +39,7 @@ export function Header1() {
 				<div className="items-center gap-3 lg:gap-5 flex">
 					<Link href="/feed" className='hidden md:block'>
 						<Button className='text-base flex items-center gap-2'>
-							Trouver un meublé
+							Réserver un meublé
 							<MapPinHouseIcon />
 						</Button>
 					</Link>
